@@ -80,3 +80,43 @@
         display: flex;
         align-items: center;
       }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 22px;
+        height: 600px;
+       }
+
+       .content-thumb {
+        padding: 8px;
+       }
+
+      .thumb {
+        display: block;
+        width: 450px;
+        height: 230px;
+      }
+
+      .testo-logo h2,p {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .testo-logo p{
+        color: grey;
+    }
+
+      .logo {
+        width: 50px;
+        padding: 8px 2px;
+      }
+
+      .profilo {
+        display: flex;
+        align-items: center;
+      }
+
+    .profilo-logo {
+        padding: 10px;
+    }
