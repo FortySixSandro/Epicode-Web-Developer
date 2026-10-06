@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
 </head>
-<body>
-    
+
+<body id="top">
+
     <header>
         <h1>Alessandro Milazzo</h1>
         <p><strong>Studente Full Stack</strong> &ndash; corso Epicode 2026</p>
@@ -21,44 +23,158 @@
     </header>
 
     <main>
+        <section>
+            <div>
+                <h2 id="chi-sono">Chi sono</h2>
 
-        <h2 id="chi-sono">Chi sono</h2>
-        <p>Mi chiamo Alessandro Milazzo e sto imparando a programmare. Studio sviluppo web con <strong>Epicode</strong> 
-            e ogni giorno aggiungo qualcosa di nuovo a questa pagina. 
-                Mi piace lavorare in gruppo, leggere documentazione tecnica e 
-                    capire come funzionano le cose.</p>
+                <div>
+                    <img src="assets/img/hasbulla.jpg" alt="Foto profilo Hasbulla" height="200px">
+                </div>
 
-        <p>Vivo a Palermo. Ho una formazione precedente in <em>servizio antincendio</em> 
-            e ora sto cambiando settore. Cerco un primo ruolo come sviluppatore frontend.</p>
+                <p>Mi chiamo Alessandro Milazzo e sto imparando a programmare.
+                    Studio sviluppo web con
+                    <strong>Epicode</strong>
+                    e ogni giorno aggiungo qualcosa di nuovo a questa pagina.
+                    Mi piace lavorare in gruppo, leggere documentazione tecnica e
+                    capire come funzionano le cose.
+                </p>
 
-        <h2 id="competenze">Competenze</h2>
-        <p>Le tecnologie che vedeo durante le prime settimane di corso.</p>
-        <ul>
-            <li>HTML &ndash; struttura delle pagine</li>
-            <li>CSS &ndash; stile e impaginazione</li>
-            <li>Git e GitHub &ndash; versionamento del codice</li>
-            <li>Visual Studio Cose &ndash; editor di lavoro</li>
-        </ul>
+                <p>Vivo a Palermo. Ho una formazione precedente in <em>servizio antincendio</em>
+                    e ora sto cambiando settore. Cerco un primo ruolo come sviluppatore frontend.</p>
 
-        <h2 id="progetti">Progetti</h2>
-        <p>I lavori fatti durante le prime settimane di corso.</p>
+            </div>
 
-        <h3>Pre-corso</h3>
-        <p>Consegne del pre-corso:
-            <a href="https://github.com/FortySixSandro/Epicode-Web-Developer/tree/main/pre-corso" 
-                target="_blank">Consegne</a></p>
+            <div>
+                <h2 id="competenze">Competenze</h2>
+                <p>Le tecnologie che vedeo durante le prime settimane di corso.</p>
+                <ul>
+                    <li>HTML &ndash; struttura delle pagine</li>
+                    <li>CSS &ndash; stile e impaginazione</li>
+                    <li>Git e GitHub &ndash; versionamento del codice</li>
+                    <li>Visual Studio Cose &ndash; editor di lavoro</li>
+                </ul>
+                <a href="#top">Torna sopra!</a>
+            </div>
 
-        <h2 id="contatti">Contatti</h2>
-        <p>Sono presente su queste piattaforme professionali, dove puoi seguire i miei progetti e contattarmi.</p>
-        <p>Profilo GitHub: <a href="https://github.com/FortySixSandro" target="_blank">github.com/FortySixSandro</a></p>
-        <p>Profilo LinkedIn: <a href="javascript:void(0);">linkedin.com/in/sandro</a></p>
 
+            <table>
+                <div>
+                    <h2 id="esperienze">Esperienze</h2>
+                    <p>Un riepilogo del mio percorso formativo e lavorativo recente.</p>
+                </div>
+
+                <thead>
+                    <tr>
+                        <th>Anno</th>
+                        <th>Ruolo</th>
+                        <th>Azienda/Scuola</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026</td>
+                        <td>Studente Full Stack</td>
+                        <td>Epicode</td>
+                    </tr>
+                    <tr>
+                        <td>2024-2026</td>
+                        <td>Addetto Antincendio</td>
+                        <td>UNION Lido</td>
+                    </tr>
+                    <tr>
+                        <td>2018-2023</td>
+                        <td>Cameriere</td>
+                        <td>Hotel</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <a href="#top">Torna sopra!</a>
+
+            <div>
+                <h2 id="progetti">Progetti</h2>
+                <p>I lavori fatti durante le prime settimane di corso.</p>
+
+                <h3>Pre-corso</h3>
+                <p>Consegne del pre-corso:
+                    <a href="https://github.com/FortySixSandro/Epicode-Web-Developer/tree/main/pre-corso"
+                        target="_blank">Consegne</a>
+                </p>
+                <a href="#top">Torna sopra!</a>
+            </div>
+        </section>
 
     </main>
+
+    <aside>
+        <h2 id="contatti">Contattami</h2>
+        <p>Compila il form per scrivermi. Ti rispondo entro 24 ore.</p>
+
+        <form action="">
+            <label for="nome">Nome</label>
+            <br>
+            <input type="text" id="nome" name="nome">
+
+            <br>
+            <br>
+
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+
+            <br>
+            <br>
+
+            <label for="motivoDelContatto">Motivo del contatto</label>
+            <br>
+
+            <select required name="motivoDelContatto" id="motivoDelContatto">
+                <option value=""></option>
+                <option value="lavoro">Proposta di lavoro</option>
+                <option value="pre">Preventivo</option>
+                <option value="info">Informazioni</option>
+            </select>
+
+            <br>
+            <br>
+
+            <label for="dataRisposta">Data preferita per la risposta</label>
+            <br>
+            <input type="date">
+
+            <br>
+            <br>
+
+            <label for="messaggio">Messaggio</label>
+            <br>
+            <textarea name="messaggio" id="messaggio" rows="5"></textarea>
+
+            <br>
+            <br>
+
+            <input required type="checkbox" name="termini"> Accetto di essere ricontattato all'indirizzo indicato
+
+            <br>
+            <br>
+
+            <button type="submit">Invia</button>
+
+        </form>
+
+        <p>Sono presente su queste piattaforme professionali, dove puoi seguire i miei progetti.</p>
+        <p>Profilo GitHub: <a href="https://github.com/FortySixSandro" target="_blank">github.com/FortySixSandro</a>
+        </p>
+        <p>Profilo LinkedIn: <a href="javascript:void(0);">linkedin.com/in/sandro</a></p>
+    </aside>
+
+    <a href="#top">Torna sopra!</a>
 
     <footer>
         <p>&copy; 2026 Alessandro Milazzo</p>
     </footer>
 
 </body>
+
 </html>
