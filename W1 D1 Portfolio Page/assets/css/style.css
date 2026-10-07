@@ -41,6 +41,12 @@ textarea:focus {
     color: white;
 }
 
+input, textarea{
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    width: 60%;
+}
+
 button {
     background-color: hsl(220, 60%, 30%);
     color: white;
