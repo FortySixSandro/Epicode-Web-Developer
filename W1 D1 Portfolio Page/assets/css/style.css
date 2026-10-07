@@ -3,9 +3,8 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    text-align: justify;
+    line-height: 1.7;
 }
-
 
 
 /* 
@@ -23,7 +22,6 @@ nav {
     height: 100%;
 }
 */
-
 
 
 .bloccoCompetenze span {
