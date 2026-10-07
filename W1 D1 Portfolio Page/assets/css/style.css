@@ -8,22 +8,17 @@ body {
 }
 
 
-/* 
+
 header{
-    border: 2px solid yellow;
     background-image: url(https://images.pexels.com/photos/11991514/pexels-photo-11991514.jpeg);
     background-size: cover;
     text-align: center;
-    height: 350px;
+    line-height: 2.4;
 }
-
-
-nav {
-    border: 1px solid red;
-    height: 100%;
-}
-*/
-
+header h1{color: white; font-style: italic;}
+header p{color: #F44A4A; font-style: italic;}
+nav li{color: white;}
+nav a{color: hsl(67, 98%, 26%); font-weight: bold;}
 
 #competenze span {
     font-weight: bold;
