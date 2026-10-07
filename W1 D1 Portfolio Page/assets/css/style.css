@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+}
+
+
+
+/* 
+header{
+    border: 2px solid yellow;
+    background-image: url(https://images.pexels.com/photos/11991514/pexels-photo-11991514.jpeg);
+    background-size: cover;
+    text-align: center;
+    height: 350px;
+}
+
+
+nav {
+    border: 1px solid red;
+    height: 100%;
+}
+*/
+
+
+
+.bloccoCompetenze span {
+    font-weight: bold;
+}
+
+
+form label {
+    color: #1F3D7A;
+    font-weight: bold;
+}
+
+form input{font-family: 'Helvetica Neue', Arial, sans-serif;}
+input:focus{background-color: #232323; color: white;}
+select:focus{background-color: #232323; color: white;}
+
+button {
+    background-color: hsl(220, 60%, 30%);
+    color: white;
+    padding: 5px;
+}
+
+button:hover {
+    background-color: hsl(220, 60%, 45%)
+}
+
+footer {
+    padding: 1px;
+    text-align: center;
+    color: white;
+    background-color: #172136;
+}
+
+
+
+
+/* Colori e Utility */
+
+.titoloBlu {
+    color: #1F3D7A;
+}
+
+.bold {
+    font-weight: bold;
+}
