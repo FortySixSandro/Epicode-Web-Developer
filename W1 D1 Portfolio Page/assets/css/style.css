@@ -51,6 +51,8 @@ button:hover {
     background-color: hsl(220, 60%, 45%)
 }
 
+nav a:hover{color: white;}
+
 footer {
     padding: 1px;
     text-align: center;
