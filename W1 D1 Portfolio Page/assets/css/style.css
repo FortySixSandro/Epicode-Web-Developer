@@ -3,6 +3,7 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    font-size: 16px;
     line-height: 1.7;
 }
 
@@ -34,9 +35,16 @@ form label {
     font-weight: bold;
 }
 
-form input{font-family: 'Helvetica Neue', Arial, sans-serif;}
-input:focus{background-color: #232323; color: white;}
-select:focus{background-color: #232323; color: white;}
+form input {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    background-color: #232323;
+    color: white;
+}
 
 button {
     background-color: hsl(220, 60%, 30%);
