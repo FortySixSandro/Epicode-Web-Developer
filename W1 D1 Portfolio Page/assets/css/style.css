@@ -137,11 +137,11 @@ footer {
 
 
 /* Colori e Utility */
-color: #000000;
-color: #B49F40;
-color: #14213d;
-color: #e5e5e5;
-color: #ffffff;
+color #000000
+color #B49F40
+color #14213d
+color #e5e5e5
+color #ffffff
 
 .titoloBlu {
     color: #1F3D7A;
