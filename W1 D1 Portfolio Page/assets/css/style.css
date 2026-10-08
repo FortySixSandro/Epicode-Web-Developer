@@ -9,6 +9,9 @@ body {
 
 
 
+#competenze li:nth-child(odd){background-color: #eee;}
+tbody tr:nth-child(odd){background-color: #eee;}
+
 header{
     background-image: url(https://images.pexels.com/photos/11991514/pexels-photo-11991514.jpeg);
     background-size: cover;
@@ -46,6 +49,8 @@ input, textarea{
     font-size: 1rem;
     width: 60%;
 }
+
+input[type="checkbox"]{width: auto;}
 
 button {
     background-color: hsl(220, 60%, 30%);
