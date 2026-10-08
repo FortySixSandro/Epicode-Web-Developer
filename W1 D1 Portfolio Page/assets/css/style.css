@@ -70,12 +70,16 @@ nav a:hover {
 
 /* SEZIONI GENERALI */
 section,
-aside {
+aside{
     background-color: white;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 24px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.185);
+}
+
+aside {
+    margin: 0 20px 24px;
 }
 
 section h2 {
