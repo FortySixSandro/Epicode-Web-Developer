@@ -1,27 +1,88 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
+/* RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     line-height: 1.7;
+    margin: 0;
+    background-color: #eee;
+}
+
+/*   */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*   */
+
+main{
+    margin: 0 auto; 
+    padding: 40px 20px;
 }
 
 
-
-#competenze li:nth-child(odd){background-color: #eee;}
-tbody tr:nth-child(odd){background-color: #eee;}
-
-header{
-    background-image: url(https://images.pexels.com/photos/11991514/pexels-photo-11991514.jpeg);
+header {
+    background-image: url(https://media.craiyon.com/2023-11-05/1c96bb4fca8e427daf3027137fe43ff3.webp);
     background-size: cover;
     text-align: center;
     line-height: 2.4;
+    border-bottom: 4px solid #B49F40;
 }
-header h1{color: white; font-style: italic;}
-header p{color: #F44A4A; font-style: italic;}
-nav li{color: white;}
-nav a{color: hsl(67, 98%, 26%); font-weight: bold;}
+
+header h1 {
+    color: white;
+    font-style: italic;
+    margin: 0;
+    text-shadow: 1px 1px 0px black;
+}
+
+header p {
+    color: #B49F40;
+    font-style: italic;
+    text-shadow: 1px 1px 0px black;
+    margin: 0;
+}
+
+nav ul{padding: 0;}
+
+nav li {
+    color: #e5e5e5;
+    display: inline-block;
+    padding: 10px;
+}
+
+
+nav a {
+    color: hsl(0,0%,90%);
+    font-weight: bold;
+    text-shadow: 4px 4px 4px black;
+    display: inline-block;
+    
+}
+
+nav a:hover {
+    color: #B49F40;
+}
+
+
+
+
+
+
+
+
+
+
+#competenze li:nth-child(odd) {
+    background-color: #eee;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #eee;
+}
 
 #competenze span {
     font-weight: bold;
@@ -44,13 +105,16 @@ textarea:focus {
     color: white;
 }
 
-input, textarea{
+input,
+textarea {
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     width: 60%;
 }
 
-input[type="checkbox"]{width: auto;}
+input[type="checkbox"] {
+    width: auto;
+}
 
 button {
     background-color: hsl(220, 60%, 30%);
@@ -62,7 +126,6 @@ button:hover {
     background-color: hsl(220, 60%, 45%)
 }
 
-nav a:hover{color: white;}
 
 footer {
     padding: 1px;
@@ -73,8 +136,12 @@ footer {
 
 
 
-
 /* Colori e Utility */
+color: #000000;
+color: #B49F40;
+color: #14213d;
+color: #e5e5e5;
+color: #ffffff;
 
 .titoloBlu {
     color: #1F3D7A;
