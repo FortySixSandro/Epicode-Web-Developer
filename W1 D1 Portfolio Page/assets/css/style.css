@@ -11,6 +11,7 @@ body {
     line-height: 1.7;
     margin: 0;
     background-color: #eee;
+    padding: 0;
 }
 
 main{
@@ -60,7 +61,6 @@ nav a {
     font-weight: bold;
     text-shadow: 4px 4px 4px black;
     display: inline-block;
-    
 }
 
 nav a:hover {
@@ -75,6 +75,7 @@ section, aside {
     margin-bottom: 24px;
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.185);
 }
+
 
 section h2{color: #14213d;}
 section h2::before{content: "- "; color: #B49F40;}
@@ -111,7 +112,7 @@ tbody tr:nth-child(odd) {
 /*SEZIONE PROGETTI */
 
 
-#progetti :nth-child(3)::after{
+.preCorso h3::after{
     content: "NEW";
     margin-left: 10px;
     background-color: rgb(219, 0, 0);
