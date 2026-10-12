@@ -81,19 +81,26 @@ console.log(`indefinito è di tipo: "${typeof indefinito}"`);
 let numero1 = 5;
 let stringa1 = '5';
 console.log(`${numero1 == stringa1}`);
-console.log(`${numero1 === stringa1}`);            //il valore delle due variabili è uguale ma il tipo è differente.
+console.log(`${numero1 === stringa1}`);        //il valore delle due variabili è uguale ma il tipo è differente.
 
 /* ESERCIZIO 7 — Conversioni implicite
    Senza eseguire il codice, prevedi in commento il risultato di queste 4 espressioni.
    Poi stampale per verificare.
-   - "5" + 3
-   - "5" - 3
-   - true + 1
-   - "10" * "2"
+   - "5" + 3         //53
+   - "5" - 3         //2
+   - true + 1        //2
+   - "10" * "2"      //20
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let num1 = "5";
+let num2 = 3;
+let vero = true;
+let num10 = "10";
+console.log(`${"5" + 3 }`);
+console.log(`${"5" - 3}`);
+console.log(`${true + 1}`);
+console.log("10" * "2")
 /* ESERCIZIO 8 — Classificazione numero
    Variabile "n".
    Usando % e operatori logici, stampa tre righe:
