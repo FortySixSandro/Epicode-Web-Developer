@@ -6,21 +6,26 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     line-height: 1.7;
+    background-color: #f4f1ec;
     margin: 0;
-    background-color: #eee;
     padding: 0;
+    color: #2b2b2b;
 }
 
 main {
     margin: 0 auto;
     padding: 40px 20px;
+    max-width: 920px;
 }
 
-/*   */
+/* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif+Caption:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 /* HEADER/NAV*/
 header {
@@ -28,23 +33,25 @@ header {
     background-size: cover;
     text-align: center;
     line-height: 2.4;
-    border-bottom: 4px solid #B49F40;
+    border-bottom: 4px solid hsl(45, 90%, 60%);
     width: 100%;
     padding: 12px;
 }
 
 header h1 {
     color: white;
-    font-style: italic;
-    margin: 0;
+    font-family: "PT Serif Caption", serif;
+    font-size: 50px;
+    margin-bottom: 0;
     text-shadow: 1px 1px 0px black;
+
 }
 
 header p {
     color: #B49F40;
     font-style: italic;
+    margin-top: 0;
     text-shadow: 1px 1px 0px black;
-    margin: 0;
 }
 
 nav ul {
@@ -78,9 +85,10 @@ aside{
     box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.185);
 }
 
-aside {
+/* aside {
     margin: 0 20px 24px;
-}
+    max-width: 920px;
+} */
 
 section h2 {
     color: #14213d;
@@ -115,6 +123,9 @@ section h2::before {
     color: #B49F40;
 
 }
+
+#chi-sono{margin-top: -75px;}
+
 
 /* SEZIONE COMPETENZE */
 #competenze li:nth-child(odd) {
