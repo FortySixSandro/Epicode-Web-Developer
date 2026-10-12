@@ -110,7 +110,10 @@ console.log("10" * "2")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let variabile = 4;
+console.log(`Il numero ${variabile} è pari: ${variabile % 2} quindi ${variabile % 2 === 0}`);
+console.log(`Il numero ${variabile} è divisibile per tre: ${variabile % 3} quindi ${variabile % 2 === 3}`);
+console.log(`Il numero ${variabile} è pari e divisibile per tre: ${variabile % 3} quindi ${variabile % 2 === 3}`);
 /* --EXTRA-- ESERCIZIO 9 — Triangolo
    Tre const "a", "b", "c" (lunghezze dei lati).
    Calcola perimetro.
