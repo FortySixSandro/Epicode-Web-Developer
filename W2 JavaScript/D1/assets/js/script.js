@@ -12,6 +12,9 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const NOME = 'Alessandro';
+const COGNOME = 'Milazzo';
+console.log(`Ciao mi chiamo ${NOME} ${COGNOME}.`);
 
 /* ESERCIZIO 2 — Calcolatrice base
    Due numeri "a" e "b".
@@ -20,7 +23,14 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const a = 2;
+const b = 10;
+console.log(`La somma è: ${a + b}`);
+console.log(`La differenza è: ${b - a}`);
+console.log(`Il prodotto è: ${a * b}`);
+console.log(`La divisione è: ${b / a}`);
+console.log(`Il resto è: ${a % b}`);
+console.log(`L'elevamento è: ${a ** b}`);
 /* ESERCIZIO 3 — Età nel tempo
    const annoNascita (scegli un anno).
    const annoCorrente = 2026.
@@ -29,7 +39,11 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const ANNONASCITA = 1998;
+const ANNOCORRENTE = 2026;
+console.log(`La mia età attuale è: ${ANNOCORRENTE - ANNONASCITA}`);
+console.log(`La mia età tra 10 anni sarà di: ${ANNOCORRENTE - ANNONASCITA + 10}`);
+console.log(`La mia età 5 anni fa era: ${ANNOCORRENTE - ANNONASCITA - 5}`);
 /* ESERCIZIO 4 — Maggiorenne?
    Variabile "eta".
    Calcola "maggiorenne" come "eta >= 18".
@@ -37,7 +51,8 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let eta = 28;
+console.log(`La mia eta è: ${eta} - Sono maggiorenne? ${28 > 18}`);
 /* ESERCIZIO 5 — Tipo del valore
    Cinque variabili: una string, una number, una boolean, una null, una undefined.
    Stampa per ognuna: "nome è di tipo: string" usando typeof.
@@ -45,7 +60,16 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let parola = 'ciao';
+console.log(`parola è di tipo: "${typeof parola}"`);
+let numero = 4;
+console.log(`4 è di tipo: "${typeof numero}"`);
+let bulean = true;
+console.log(`bulean è di tipo: "${typeof bulean}"`);
+let vuoto = null;
+console.log(`vuoto è di tipo: "${typeof vuoto}"`);
+let indefinito;
+console.log(`indefinito è di tipo: "${typeof indefinito}"`);
 /* ESERCIZIO 6 — === vs ==
    numero = 5
    stringa = "5"
@@ -54,6 +78,10 @@ REGOLE
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let numero1 = 5;
+let stringa1 = '5';
+console.log(`${numero1 == stringa1}`);
+console.log(`${numero1 === stringa1}`);            //il valore delle due variabili è uguale ma il tipo è differente.
 
 /* ESERCIZIO 7 — Conversioni implicite
    Senza eseguire il codice, prevedi in commento il risultato di queste 4 espressioni.
