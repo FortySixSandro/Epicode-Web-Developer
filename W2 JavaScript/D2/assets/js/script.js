@@ -33,12 +33,17 @@ console.log(persona);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const utente = {indirizzo: {via: 'Via Pippo 4', citta: 'Palermo', cap: '90100'}};
+console.log(utente.indirizzo.cap);
+
 /* ESERCIZIO 4 — Bracket dinamica
    Sull'oggetto 'persona', variabile chiave = 'nome'.
    Stampa il valore con bracket notation usando la variabile chiave.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+console.log(persona['nome']);
 
 /* ESERCIZIO 5 — Numero più grande
    Tre numeri a, b, c.
