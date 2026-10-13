@@ -51,8 +51,10 @@ console.log(`La mia età 5 anni fa era: ${ANNOCORRENTE - ANNONASCITA - 5}`);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let eta = 28;
-console.log(`La mia eta è: ${eta} - Sono maggiorenne? ${28 > 18}`);
+let eta;
+eta = 28;
+let maggiorenne = eta >= 18;
+console.log(`Età: ${eta} - Maggiorenne? ${maggiorenne}`);
 /* ESERCIZIO 5 — Tipo del valore
    Cinque variabili: una string, una number, una boolean, una null, una undefined.
    Stampa per ognuna: "nome è di tipo: string" usando typeof.
