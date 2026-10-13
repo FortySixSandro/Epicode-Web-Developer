@@ -73,11 +73,15 @@ if (a > b && a > c) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let totale = 35;
-const spedizione = totale >= 50 ? 0 : 9.90;
-const totaleFinale = totale + spedizione;
+let spedizione = totale >= 50 ? 0 : 9.90;
+let totaleFinale = totale + spedizione;
 console.log('Totale carrello:', totale,'€', '-', 'Spedizione:', spedizione,'€','-', 'Totale finale:',totaleFinale,'€');
 
-
+if (totale >= 50) {
+   spedizione = 0;
+} else {
+   spedizione = 9.90;
+}
 
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, 'ciao', true]).
