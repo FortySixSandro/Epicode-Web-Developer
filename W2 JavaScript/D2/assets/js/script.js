@@ -52,6 +52,17 @@ console.log(persona['nome']);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const a = 10;
+const b = 20;
+const c = 30;
+if (a > b && a > c) {
+   console.log(a)
+} else if (b > a && b > c)  {
+   console.log(b)
+} else if (c > a && c > b) {
+   console.log(c)
+} else{console.log('Pareggio')};
+
 /* ESERCIZIO 6 — E-commerce: spedizione
    Variabile 'totale'.
    Se totale >= 50 spedizione gratuita, altrimenti 9.90.
@@ -60,6 +71,10 @@ console.log(persona['nome']);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let totale;
+let totaleCarrello = totale >=50 ? "Spedizione Gratuita" : "Spedizione 9.90€";
+console.log(totaleCarrello)
 
 /* ESERCIZIO 7 — typeof check
    Crea un array con 3 valori diversi (es. [42, 'ciao', true]).
