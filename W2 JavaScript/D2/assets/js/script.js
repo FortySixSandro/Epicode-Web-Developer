@@ -85,6 +85,7 @@ console.log('Totale carrello:', totale,'€', '-', 'Spedizione:', spedizione,'�
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
    Stampa array e length.
