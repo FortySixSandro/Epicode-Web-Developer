@@ -13,6 +13,9 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+   const persona = {nome: 'Alessandro', cognome: 'Milazzo', eta: 28, citta: 'Palermo'};
+   console.log(`${persona.nome} ${persona.cognome}, ${persona.eta} anni, viva a ${persona.citta}.`);
+
 /* ESERCIZIO 2 — Aggiungi e rimuovi
    Sull'oggetto 'persona': aggiungi 'email', poi rimuovi 'eta'.
    Stampa l'oggetto risultante.
