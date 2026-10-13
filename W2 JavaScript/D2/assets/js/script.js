@@ -90,9 +90,7 @@ if (totale >= 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const myNumbers = [];
-myNumbers.push (1,2,3,4,5);
-console.log(myNumbers, myNumbers.length);
+
 
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
@@ -100,6 +98,11 @@ console.log(myNumbers, myNumbers.length);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const myNumbers = [];
+myNumbers.push (1,2,3,4,5);
+console.log(myNumbers, myNumbers.length);
+
 
 /* ESERCIZIO 9 — Carrello con splice
    Array ['Penna', 'Quaderno', 'Zaino', 'Astuccio'].
