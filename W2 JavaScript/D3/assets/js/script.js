@@ -286,6 +286,12 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+for (let i = 0; i < nomi.length; i++) {
+	for(let j = 0; j <personaggiFemminili.length; j++){
+	}
+}
+
+
 /* ESERCIZIO 10 — Personaggio casuale
    indice = Math.floor(Math.random() * starWarsCharacters.length)
    personaggio = starWarsCharacters[indice]
