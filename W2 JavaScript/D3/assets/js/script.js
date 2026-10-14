@@ -136,7 +136,7 @@ for (let i = 0; i < starWarsCharacters.length; i++)
 	if (starWarsCharacters[i].gender === 'female') {
 		{ personaggiFemminili.push(starWarsCharacters[i].name) }
 	}
-console.log(personaggiFemminili)
+console.log(personaggiFemminili);
 
 
 /* ESERCIZIO 3 — Oggetto raggruppamento
@@ -146,6 +146,15 @@ console.log(personaggiFemminili)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const perColoreOcchi = {
+	blue: [],
+	yellow: [],
+	brown: [],
+	red: [],
+	'blue-gray': []
+};
+
+
 /* ESERCIZIO 4 — Raggruppa per colore degli occhi
    For su starWarsCharacters + switch (character.eye_color).
    In ogni case fai push del personaggio nell'array giusto. Ricorda break.
@@ -153,6 +162,9 @@ console.log(personaggiFemminili)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
+
 
 /* ESERCIZIO 5 — Massa totale dell'equipaggio (while)
    i = 0, massaTotale = 0.
