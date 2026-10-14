@@ -112,6 +112,8 @@ console.log(myNumbers, myNumbers.length);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+
+
 /* ESERCIZIO 10 — Cerca un articolo
    Array prodotti = ['Penna', 'Quaderno', 'Zaino'].
    cercato = 'Zaino'.
