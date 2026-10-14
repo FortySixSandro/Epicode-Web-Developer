@@ -116,6 +116,12 @@ const starWarsCharacters = [
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const nomi = [];
+
+for (let i = 0; i < starWarsCharacters.length; i++) { nomi.push(starWarsCharacters[i].name) }
+console.log(nomi);
+
+
 /* ESERCIZIO 2 — Solo i femminili
    Array vuoto "personaggiFemminili". Con un for + if (gender === "female"),
    crea un nuovo oggetto { name, hair_color, eye_color } e fai push.
@@ -123,6 +129,15 @@ const starWarsCharacters = [
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const personaggiFemminili = [];
+
+for (let i = 0; i < starWarsCharacters.length; i++)
+	if (starWarsCharacters[i].gender === 'female') {
+		{ personaggiFemminili.push(starWarsCharacters[i].name) }
+	}
+console.log(personaggiFemminili)
+
 
 /* ESERCIZIO 3 — Oggetto raggruppamento
    Crea perColoreOcchi con chiavi: blue, yellow, brown, red, blue-gray (con trattino).
