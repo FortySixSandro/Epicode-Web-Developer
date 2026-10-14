@@ -163,7 +163,27 @@ const perColoreOcchi = {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+	switch (starWarsCharacters[i].eye_color) {
+		case 'blue':
+			perColoreOcchi.blue.push(starWarsCharacters[i].name)
+			break;
+		case 'yellow':
+			perColoreOcchi.yellow.push(starWarsCharacters[i].name)
+			break;
+		case 'brown':
+			perColoreOcchi.brown.push(starWarsCharacters[i].name)
+			break;
+		case 'red':
+			perColoreOcchi.red.push(starWarsCharacters[i].name)
+			break;
+			// case 'blue-gray':
+			// perColoreOcchi'.blue-gray'.push(starWarsCharacters[i].name)
+			// break;
 
+	}
+}
+console.log(perColoreOcchi)
 
 
 /* ESERCIZIO 5 — Massa totale dell'equipaggio (while)
