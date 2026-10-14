@@ -250,6 +250,13 @@ switch (true) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+	if (starWarsCharacters[i].gender === 'n/a') {
+		starWarsCharacters[i].gender = 'robot';
+	}
+}
+
+console.log(starWarsCharacters);
 /* ESERCIZIO 8 — Più alto e più basso
    For su starWarsCharacters. Trova il personaggio con altezza maggiore e quello con altezza minore.
    L'altezza è una stringa: convertila con Number().
@@ -257,6 +264,19 @@ switch (true) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+let piuAlto = starWarsCharacters[0];
+let piuBasso = starWarsCharacters[0];
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+	if (Number(starWarsCharacters[i].height > Number(piuAlto.height))) {
+		piuAlto = starWarsCharacters[i];
+	}
+	if (Number (starWarsCharacters[i].height < Number (piuBasso.height))) {
+		piuBasso = starWarsCharacters[i];
+	}
+}
+
 
 /* ESERCIZIO 9 — Rimuovi i femminili dai nomi (cicli annidati)
    Sull'array "nomi" dell'esercizio 1: for esterno su nomi, for interno su personaggiFemminili.
