@@ -132,10 +132,15 @@ console.log(nomi);
 
 const personaggiFemminili = [];
 
-for (let i = 0; i < starWarsCharacters.length; i++)
+for (let i = 0; i < starWarsCharacters.length; i++) {
 	if (starWarsCharacters[i].gender === 'female') {
-		{ personaggiFemminili.push(starWarsCharacters[i].name) }
+		personaggiFemminili.push({
+			name: starWarsCharacters[i].name,
+			hair_color: starWarsCharacters[i].hair_color,
+			eye_color: starWarsCharacters[i].eye_color,
+		});
 	}
+}
 console.log(personaggiFemminili);
 
 
@@ -177,9 +182,9 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
 		case 'red':
 			perColoreOcchi.red.push(starWarsCharacters[i].name)
 			break;
-			// case 'blue-gray':
-			// perColoreOcchi'.blue-gray'.push(starWarsCharacters[i].name)
-			// break;
+		case 'blue-gray':
+			perColoreOcchi["blue-gray"].push(starWarsCharacters[i].name)
+			break;
 
 	}
 }
