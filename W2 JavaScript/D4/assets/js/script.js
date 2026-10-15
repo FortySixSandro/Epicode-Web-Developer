@@ -68,6 +68,13 @@ console.log(somma, sommaPazza(4,4))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function divisibilePer3o7(n){
+
+   return n > 0 && (n % 3 === 0 || n % 7 === 0)
+
+}
+const numDivisibile = divisibilePer3o7(21)
+console.log(numDivisibile)
 /* ESERCIZIO 7 — invertiStringa
    Funzione invertiStringa(testo): ritorna la stringa invertita.
    Vincolo: niente .reverse() di array.
