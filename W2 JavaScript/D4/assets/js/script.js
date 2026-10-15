@@ -99,6 +99,13 @@ console.log(numDivisibile)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function inizialiMaiuscole(frase){
+
+const parole = 
+
+
+}
+
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
    Usa slice. Prova con "EPICODE".
