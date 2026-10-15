@@ -101,6 +101,16 @@ console.log(numDivisibile)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+// function invertiStringa(testo){
+
+//    const parole = testo.split('');
+//    for (let i = 0; 0 < parole.length; i--)
+   
+//    return testo;
+// }
+// console.log(parole("PAROLE"));
+
+
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
    "ciao mondo" → "Ciao Mondo".
