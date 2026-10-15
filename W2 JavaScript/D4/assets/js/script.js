@@ -12,7 +12,11 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-console.log("test")
+function area(l1, l2) {
+   return l1 * l2;
+}
+const fun1 = area(3, 4);
+console.log(fun1);
 
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
@@ -21,6 +25,19 @@ console.log("test")
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+function sommaPazza(a, b) {
+
+
+   if (a === b) {
+      return (a + b) * 3;
+   } else {
+      return (a + b);
+
+   }
+};
+const somma = sommaPazza(2, 3)
+console.log(somma, sommaPazza(4,4))
 
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
