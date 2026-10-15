@@ -70,6 +70,16 @@ console.log(intervallo)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function epify(testo){
+   if (testo.startsWith("EPICODE")){
+      return testo;
+   }
+
+   return testo + "EPICODE"
+}
+
+console.log(epify("ciao "))
+
 /* ESERCIZIO 6 — divisibilePer3o7
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
 */
@@ -99,12 +109,18 @@ console.log(numDivisibile)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function inizialiMaiuscole(frase){
+function inizialiMaiuscole(frase) {
 
-const parole = 
-
-
+   const maiuscole = frase.split(' ');
+   
+   for (let i = 0; i < maiuscole.length; i++){
+      const prima = maiuscole[i].slice(0,1).toUpperCase();
+      const dopo = maiuscole[i].slice(1);
+      maiuscole[i] = prima + dopo;
+   }
+   return maiuscole.join(' ');
 }
+   console.log(inizialiMaiuscole('non capisco niente di javascript'));
 
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
