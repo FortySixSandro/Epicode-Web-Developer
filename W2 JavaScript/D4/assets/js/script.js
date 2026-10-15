@@ -37,7 +37,7 @@ function sommaPazza(a, b) {
    }
 };
 const somma = sommaPazza(2, 3)
-console.log(somma, sommaPazza(4,4))
+console.log(somma, sommaPazza(4, 4))
 
 /* ESERCIZIO 3 — distanzaDa19
    Funzione distanzaDa19(n): ritorna Math.abs(n - 19).
@@ -54,6 +54,14 @@ console.log(somma, sommaPazza(4,4))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+function dentroIntervallo(n) {
+
+   return n >= 20 && n <= 100 || n === 400;
+
+
+}
+const intervallo = dentroIntervallo(67)
+console.log(intervallo)
 /* ESERCIZIO 5 — epify
    Funzione epify(testo): aggiunge "EPICODE " davanti.
    Se il testo comincia già con "EPICODE", lo lascia invariato.
@@ -68,7 +76,7 @@ console.log(somma, sommaPazza(4,4))
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-function divisibilePer3o7(n){
+function divisibilePer3o7(n) {
 
    return n > 0 && (n % 3 === 0 || n % 7 === 0)
 
