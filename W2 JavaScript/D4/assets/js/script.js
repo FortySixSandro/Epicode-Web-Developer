@@ -12,6 +12,8 @@ REGOLE
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+console.log("test")
+
 /* ESERCIZIO 2 — sommaPazza
    Funzione sommaPazza(a, b): ritorna a + b.
    Se a === b: ritorna (a + b) * 3.
