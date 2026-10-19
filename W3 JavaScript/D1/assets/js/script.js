@@ -125,6 +125,12 @@ console.log(numeri, numeriCopia);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const frutti = ["mela", "banana", "pera"]
+const verdure = ["carota", "spinaci", "cetrioli"]
+
+const cibo = [...frutti, ...verdure];
+console.log(cibo)
+
 /* ESERCIZIO 6 — Spread su oggetto
    prodotto = { nome: "Cuffie", prezzo: 79.99 }
    Crea un nuovo oggetto con "disponibile: true" aggiunto, senza modificare prodotto.
