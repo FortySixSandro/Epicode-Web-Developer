@@ -7,54 +7,54 @@
 */
 
 const utenti = [
-	{
-		id: 1,
-		nome: 'Antonio',
-		cognome: 'Rossi',
-		eta: 28,
-		attivo: true,
-		città: 'Milano',
-	},
-	{
-		id: 2,
-		nome: 'Anna',
-		cognome: 'Bianchi',
-		eta: 35,
-		attivo: false,
-		città: 'Roma',
-	},
-	{
-		id: 3,
-		nome: 'Luca',
-		cognome: 'Verdi',
-		eta: 17,
-		attivo: true,
-		città: 'Milano',
-	},
-	{
-		id: 4,
-		nome: 'Sara',
-		cognome: 'Neri',
-		eta: 17,
-		attivo: true,
-		città: 'Torino',
-	},
-	{
-		id: 5,
-		nome: 'Marco',
-		cognome: 'Gialli',
-		eta: 45,
-		attivo: false,
-		città: 'Roma',
-	},
-	{
-		id: 6,
-		nome: 'Chiara',
-		cognome: 'Rosa',
-		eta: 30,
-		attivo: true,
-		città: 'Milano',
-	},
+    {
+        id: 1,
+        nome: 'Antonio',
+        cognome: 'Rossi',
+        eta: 28,
+        attivo: true,
+        città: 'Milano',
+    },
+    {
+        id: 2,
+        nome: 'Anna',
+        cognome: 'Bianchi',
+        eta: 35,
+        attivo: false,
+        città: 'Roma',
+    },
+    {
+        id: 3,
+        nome: 'Luca',
+        cognome: 'Verdi',
+        eta: 17,
+        attivo: true,
+        città: 'Milano',
+    },
+    {
+        id: 4,
+        nome: 'Sara',
+        cognome: 'Neri',
+        eta: 17,
+        attivo: true,
+        città: 'Torino',
+    },
+    {
+        id: 5,
+        nome: 'Marco',
+        cognome: 'Gialli',
+        eta: 45,
+        attivo: false,
+        città: 'Roma',
+    },
+    {
+        id: 6,
+        nome: 'Chiara',
+        cognome: 'Rosa',
+        eta: 30,
+        attivo: true,
+        città: 'Milano',
+    },
 ];
 
 /* ESERCIZIO 1 — Arrow function compatta
@@ -65,6 +65,10 @@ const utenti = [
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const quadrato = (numero) => numero * numero;
+
+console.log(quadrato(5));
+
 /* ESERCIZIO 2 — Destructuring di oggetto
    Crea un oggetto "persona" con almeno 4 properties (es. nome, cognome, eta, città).
    Estrai 3 properties in 3 variabili usando destructuring.
@@ -73,6 +77,18 @@ const utenti = [
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const persona = {
+    name: 'Leopoldo',
+    surname: 'Carletti',
+    age: 67,
+    city: 'Strangolagalli',
+};
+
+const { name, age, city } = persona;
+console.log(name);
+console.log(age);
+console.log(city);
+
 /* ESERCIZIO 3 — Destructuring nei parametri
    Scrivi una arrow function "riepilogo" che riceve un utente e ritorna
    "Nome Cognome (eta anni)" usando destructuring nei parametri.
@@ -80,6 +96,8 @@ const utenti = [
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
 
 /* ESERCIZIO 4 — Spread su array
    Crea numeri = [1, 2, 3].
