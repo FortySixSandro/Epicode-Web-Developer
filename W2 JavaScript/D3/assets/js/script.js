@@ -108,7 +108,6 @@ const starWarsCharacters = [
 		gender: 'male',
 	},
 ];
-
 /* ESERCIZIO 1 — Estrai i nomi
    Array vuoto "nomi". Con un for, fai push di ogni starWarsCharacters[i].name.
    Stampa "nomi".

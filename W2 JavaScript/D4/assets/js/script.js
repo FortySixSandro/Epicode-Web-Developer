@@ -101,15 +101,15 @@ console.log(numDivisibile)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-// function invertiStringa(testo){
+function invertiStringa(testo = "pisello"){
 
-//    const parole = testo.split('');
-//    for (let i = 0; 0 < parole.length; i--)
-   
-//    return testo;
-// }
-// console.log(parole("PAROLE"));
+const parole = testo.split(' ');
+for (let i = parole.length; i < 0; i--){
 
+}
+
+};
+console.log(testo("pisello"));
 
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
