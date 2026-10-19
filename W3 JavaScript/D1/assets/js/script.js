@@ -144,14 +144,17 @@ const prodotto = {
     prezzo: 79.99,
 };
 
-const prod2 = {...prodotto, disponibile: true}
+const prod2 = { ...prodotto, disponibile: true }
 console.log(prod2);
+
 /* ESERCIZIO 7 — forEach
    Stampa tutti gli utenti nel formato "- Nome Cognome (città)".
    Esempio: "- Mario Rossi (Milano)"
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+utenti.forEach(({ nome, cognome, città }) => console.log(`${nome} ${cognome} (${città})`));
 
 /* ESERCIZIO 8 — map a stringhe
    Usa map per creare nomiCompleti = ["Mario Rossi", "Anna Bianchi", ...].
