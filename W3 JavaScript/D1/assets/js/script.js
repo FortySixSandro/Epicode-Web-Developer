@@ -163,7 +163,7 @@ utenti.forEach(({ nome, cognome, città }) => console.log(`${nome} ${cognome} ($
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const nomiCompleti = utenti.map(({nome, cognome}) => `${nome} ${cognome}`);
+const nomiCompleti = utenti.map(({ nome, cognome }) => `${nome} ${cognome}`);
 console.log(nomiCompleti)
 
 /* ESERCIZIO 9 — map a oggetti
@@ -176,12 +176,20 @@ console.log(nomiCompleti)
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+// const utentiPlus = utenti[0];
+
+
+// console.log(utentiPlus);
+
 /* ESERCIZIO 10 — filter attivi
    Usa filter per ottenere solo gli utenti con attivo: true.
    Stampa l'array risultante.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+const attivi = utenti.filter(({ attivo }) => attivo === true)
+console.log(attivi);
 
 /* ESERCIZIO 11 — filter combinato
    Usa filter per ottenere solo gli utenti maggiorenni (eta >= 18) che vivono a Milano.
