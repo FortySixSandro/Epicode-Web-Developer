@@ -7,54 +7,54 @@
 */
 
 const utenti = [
-    {
-        id: 1,
-        nome: 'Antonio',
-        cognome: 'Rossi',
-        eta: 28,
-        attivo: true,
-        città: 'Milano',
-    },
-    {
-        id: 2,
-        nome: 'Anna',
-        cognome: 'Bianchi',
-        eta: 35,
-        attivo: false,
-        città: 'Roma',
-    },
-    {
-        id: 3,
-        nome: 'Luca',
-        cognome: 'Verdi',
-        eta: 17,
-        attivo: true,
-        città: 'Milano',
-    },
-    {
-        id: 4,
-        nome: 'Sara',
-        cognome: 'Neri',
-        eta: 17,
-        attivo: true,
-        città: 'Torino',
-    },
-    {
-        id: 5,
-        nome: 'Marco',
-        cognome: 'Gialli',
-        eta: 45,
-        attivo: false,
-        città: 'Roma',
-    },
-    {
-        id: 6,
-        nome: 'Chiara',
-        cognome: 'Rosa',
-        eta: 30,
-        attivo: true,
-        città: 'Milano',
-    },
+   {
+      id: 1,
+      nome: 'Antonio',
+      cognome: 'Rossi',
+      eta: 28,
+      attivo: true,
+      città: 'Milano',
+   },
+   {
+      id: 2,
+      nome: 'Anna',
+      cognome: 'Bianchi',
+      eta: 35,
+      attivo: false,
+      città: 'Roma',
+   },
+   {
+      id: 3,
+      nome: 'Luca',
+      cognome: 'Verdi',
+      eta: 17,
+      attivo: true,
+      città: 'Milano',
+   },
+   {
+      id: 4,
+      nome: 'Sara',
+      cognome: 'Neri',
+      eta: 17,
+      attivo: true,
+      città: 'Torino',
+   },
+   {
+      id: 5,
+      nome: 'Marco',
+      cognome: 'Gialli',
+      eta: 45,
+      attivo: false,
+      città: 'Roma',
+   },
+   {
+      id: 6,
+      nome: 'Chiara',
+      cognome: 'Rosa',
+      eta: 30,
+      attivo: true,
+      città: 'Milano',
+   },
 ];
 
 /* ESERCIZIO 1 — Arrow function compatta
@@ -78,10 +78,10 @@ console.log(quadrato(5));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const persona = {
-    name: 'Leopoldo',
-    surname: 'Carletti',
-    age: 67,
-    city: 'Strangolagalli',
+   name: 'Leopoldo',
+   surname: 'Carletti',
+   age: 67,
+   city: 'Strangolagalli',
 };
 
 const { name, surname, age } = persona;
@@ -140,8 +140,8 @@ console.log(cibo)
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const prodotto = {
-    nome: "Cuffie",
-    prezzo: 79.99,
+   nome: "Cuffie",
+   prezzo: 79.99,
 };
 
 const prod2 = { ...prodotto, disponibile: true }
@@ -218,6 +218,8 @@ console.log(trovato);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const sommaEta = utenti.reduce((acc, { eta }) => acc + eta, 0);
+console.log(sommaEta / utenti.length)
 
 
 /* ESERCIZIO 14 — sort
