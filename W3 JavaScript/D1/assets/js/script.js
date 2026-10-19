@@ -163,7 +163,8 @@ utenti.forEach(({ nome, cognome, città }) => console.log(`${nome} ${cognome} ($
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const nomiCompleti = utenti.map(({nome, cognome}) => console.log(`${nome} ${cognome}`));
+const nomiCompleti = utenti.map(({nome, cognome}) => `${nome} ${cognome}`);
+console.log(nomiCompleti)
 
 /* ESERCIZIO 9 — map a oggetti
    Usa map per creare utentiPlus: array di oggetti dove ogni utente ha tutte
