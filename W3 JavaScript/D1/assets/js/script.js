@@ -198,6 +198,9 @@ console.log(attivi);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const maggiorenne = utenti.filter(({ eta }) => eta >= 18)
+console.log(maggiorenne);
+
 /* ESERCIZIO 12 — find
    Usa find per trovare il primo utente con id === 4.
    Stampa l'oggetto.
