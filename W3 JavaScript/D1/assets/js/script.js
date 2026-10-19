@@ -198,7 +198,7 @@ console.log(attivi);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-const maggiorenne = utenti.filter(({ eta }) => eta >= 18)
+const maggiorenne = utenti.filter(({ eta, città }) => eta >= 18 && città === 'Milano')
 console.log(maggiorenne);
 
 /* ESERCIZIO 12 — find
@@ -208,12 +208,17 @@ console.log(maggiorenne);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const trovato = utenti.find(u => u.id === 4);
+console.log(trovato);
+
 /* ESERCIZIO 13 — reduce
    a) Usa reduce per calcolare l'età media (somma età / numero utenti). Stampa.
    b) Usa reduce per contare il numero di utenti attivi. Stampa.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+
 
 /* ESERCIZIO 14 — sort
    a) Ordina gli utenti per eta crescente. Stampa l'array di nomi nell'ordine.
