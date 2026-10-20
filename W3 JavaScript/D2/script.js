@@ -20,15 +20,29 @@
 const aggiungiTask = (testo, priorità) => {
   const lista = document.querySelector('#lista-task');            // trovo ul
   const li = document.createElement('li');                        // creo li
-  li.classList.add('priorita-' + priorità);
+  li.classList.add('priorita-' + priorità);                       // aggiungo la priorità
   li.textContent = testo;                                         // metto il testo dinamico  
+
+  const badge = document.createElement('span');                   // aggiungo badge
+  badge.textContent = priorità;
+  badge.classList.add('badge');
+  li.append(badge);
+
+
   const d = new Date();
   const todayDate = d.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
-
   const spanData = document.createElement('span');
   spanData.textContent = todayDate;
   spanData.classList.add('data');
-  li.append(spanData);
+
+  const bottone = document.createElement('button');
+  bottone.textContent = 'Elimina';
+
+    const divData = document.createElement('div');
+  divData.classList.add('divData');
+  divData.append(spanData);
+  divData.append(bottone);
+  li.append(divData);
   lista.append(li);
 };
 
@@ -37,5 +51,3 @@ aggiungiTask('Studiare JavaScript', "media");
 aggiungiTask('Comprare il pane', "bassa");
 aggiungiTask('Chiamare il dentista', "alta");
 aggiungiTask('Riposarsi', "bassa");
-
-// aggiungere la data
