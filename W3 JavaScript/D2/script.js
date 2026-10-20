@@ -38,7 +38,7 @@ const aggiungiTask = (testo, priorità) => {
   const bottone = document.createElement('button');
   bottone.textContent = 'Elimina';
 
-    const divData = document.createElement('div');
+  const divData = document.createElement('div');
   divData.classList.add('divData');
   divData.append(spanData);
   divData.append(bottone);
