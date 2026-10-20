@@ -13,17 +13,29 @@
    8. contaPerPriorita()
 */
 
-//trovare l'ul e creare un li da inserire all'interno
-const aggiungiTask = (testo) => {
+
+
+
+// trovare l'ul e creare un li da inserire all'interno
+const aggiungiTask = (testo, priorità) => {
   const lista = document.querySelector('#lista-task');            // trovo ul
   const li = document.createElement('li');                        // creo li
+  li.classList.add('priorita-' + priorità);
   li.textContent = testo;                                         // metto il testo dinamico  
+  const d = new Date();
+  const todayDate = d.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
+
+  const spanData = document.createElement('span');
+  spanData.textContent = todayDate;
+  spanData.classList.add('data');
+  li.append(spanData);
   lista.append(li);
 };
 
-aggiungiTask("Pagare le bollette");
-aggiungiTask("Studiare JavaScript");
-aggiungiTask("Comprare il pane");
-aggiungiTask("Chiamare il dentista");
-aggiungiTask("Riposarsi");
+aggiungiTask('Pagare le bollette', "alta");
+aggiungiTask('Studiare JavaScript', "media");
+aggiungiTask('Comprare il pane', "bassa");
+aggiungiTask('Chiamare il dentista', "alta");
+aggiungiTask('Riposarsi', "bassa");
 
+// aggiungere la data
