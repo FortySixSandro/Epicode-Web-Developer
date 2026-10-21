@@ -112,3 +112,5 @@ function aggiornaContatore() {
 
 aggiungiTask();
 aggiornaContatore();
+
+// aggiungere la possibilità di decidere che tipo di priorità avrà il nuovo elemento.
