@@ -14,40 +14,81 @@
 */
 
 
+const lista = document.querySelector('#lista-task');
+const contatore = document.querySelector('#contatore');
 
+const myTask = [
+	{
+		titoloTask: 'Pagare le bollette',
+		priorita: 'alta',
+		data: new Date(),
+	},
+	{
+		titoloTask: 'Studiare JavaScript',
+		priorita: 'media',
+		data: new Date(),
+	},
+	{
+		titoloTask: 'Comprare il pane',
+		priorita: 'bassa',
+		data: new Date(),
+	},
+	{
+		titoloTask: 'Chiamare il dentista',
+		priorita: 'alta',
+		data: new Date(),
+	},
+	{
+		titoloTask: 'Riposarsi',
+		priorita: 'bassa',
+		data: new Date(),
+	},
+	{
+		titoloTask: 'Spritz Time',
+		priorita: 'alta',
+		data: new Date(),
+	},
+];
 
-// trovare l'ul e creare un li da inserire all'interno
-const aggiungiTask = (testo, priorità) => {
-  const lista = document.querySelector('#lista-task');            // trovo ul
-  const li = document.createElement('li');                        // creo li
-  li.classList.add('priorita-' + priorità);                       // aggiungo la priorità
-  li.textContent = testo;                                         // metto il testo dinamico  
+function aggiungiTask() {
+	myTask.forEach((task) => {
+		// <li class="priorita-xxx">
+		const newLi = document.createElement('li');
+		newLi.classList.add(`priorita-${task.priorita}`);
 
-  const badge = document.createElement('span');                   // aggiungo badge
-  badge.textContent = priorità;
-  badge.classList.add('badge');
-  li.append(badge);
+		// testo del task
+		const textSpan = document.createElement('span');
+		textSpan.textContent = task.titoloTask;
+		newLi.appendChild(textSpan);
 
+		// <span class="badge">
+		const badge = document.createElement('span');
+		badge.classList.add('badge');
+		badge.textContent = task.priorita;
+		newLi.appendChild(badge);
 
-  const d = new Date();
-  const todayDate = d.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit", second: "2-digit" });
-  const spanData = document.createElement('span');
-  spanData.textContent = todayDate;
-  spanData.classList.add('data');
+		// <span class="data"> con la data
+		const spanData = document.createElement('span');
+		spanData.classList.add('data');
+		spanData.textContent = task.data.toLocaleString('it-IT');
 
-  const bottone = document.createElement('button');
-  bottone.textContent = 'Elimina';
+		// bottone elimina
+		const elimina = document.createElement('button');
+		elimina.textContent = 'Elimina';
 
-  const divData = document.createElement('div');
-  divData.classList.add('divData');
-  divData.append(spanData);
-  divData.append(bottone);
-  li.append(divData);
-  lista.append(li);
-};
+		// <div class="divData"> che contiene data + bottone (come il nostro)
+		const divData = document.createElement('div');
+		divData.classList.add('divData');
+		divData.append(spanData, elimina);
+		newLi.appendChild(divData);
 
-aggiungiTask('Pagare le bollette', "alta");
-aggiungiTask('Studiare JavaScript', "media");
-aggiungiTask('Comprare il pane', "bassa");
-aggiungiTask('Chiamare il dentista', "alta");
-aggiungiTask('Riposarsi', "bassa");
+		lista.appendChild(newLi);
+	});
+}
+
+function aggiornaContatore() {
+	contatore.textContent = myTask.length;
+}
+
+aggiungiTask();
+aggiornaContatore();
