@@ -54,12 +54,11 @@ const createDays = (daysNumber) => {
 		const dayCellDiv = document.createElement('div');
 		dayCellDiv.classList.add('day');
 		dayCellDiv.addEventListener('click', function () {
-			// per deselezionare il giorno eventualmente selezionato prima
-			unselectAllDays();
+			unselectAllDays(); // per deselezionare il giorno eventualmente selezionato prima
 			dayCellDiv.classList.add('selected');
 			changeMeetingDaySection(i);
 			if (appointments[i].length > 0) {
-				showAppointmenst(i);
+				showAppointments(i);
 			} else {
 				document.querySelector('#appointments').style.display = 'none';
 			}
@@ -81,11 +80,10 @@ const createDays = (daysNumber) => {
 		cellValue.innerText = `${dayName} ${i + 1}`;
 		dayCellDiv.appendChild(cellValue);
 		calendarDiv.appendChild(dayCellDiv);
-		// ci serve un array per ogni giorno, da pushare nell'array generale
+		// Ci serve un array per ogni giorno, da pushare nell'array generale
 		appointments.push([]);
 	}
 };
-
 
 const unselectAllDays = () => {
 	const previousSelected = document.querySelector('.selected');
@@ -100,7 +98,7 @@ const changeMeetingDaySection = (dayNumber) => {
 	newMeetingDay.classList.add('hasDay');
 };
 
-const showAppointmenst = (dayNumber) => {
+const showAppointments = (dayNumber) => {
 	const dayAppointments = appointments[dayNumber];
 	const appointmentsList = document.querySelector('#appointments ul');
 	appointmentsList.textContent = '';
@@ -110,17 +108,40 @@ const showAppointmenst = (dayNumber) => {
 		appointmentsList.appendChild(newLi);
 	});
 	document.querySelector('#appointments').style.display = 'block';
-}
+};
 
-// inserimento impegni
+// Inserimento impegni
 const meetingForm = document.querySelector('form');
+const timeSelect = document.querySelector('#newMeetingTime');
+const inputName = document.querySelector('#newMeetingName');
+const submitBtn = document.querySelector('form button');
+
+// Verifica form
+timeSelect.addEventListener('blur', function (e) {
+	if (timeSelect.value === '' || inputName.value === '') {
+		return;
+	} else {
+		submitBtn.removeAttribute('disabled');
+		submitBtn.classList.remove('disabled');
+	}
+});
+
+inputName.addEventListener('blur', function (e) {
+	if (timeSelect.value === '' || inputName.value === '') {
+		return;
+	} else {
+		submitBtn.removeAttribute('disabled');
+		submitBtn.classList.remove('disabled');
+	}
+});
+
 meetingForm.addEventListener('submit', formSubmit);
 
 function formSubmit(e) {
 	e.preventDefault();
 	const selectedDay = document.querySelector('#newMeetingDay').textContent;
 	if (selectedDay === 'Clicca su un giorno') {
-		alert('Seleziona un giorno prima di inserire l\'evento');
+		alert("Selezionare un giorno prima di inserire l'evento");
 		meetingForm.reset();
 		return;
 	}
@@ -130,5 +151,13 @@ function formSubmit(e) {
 	const dayIndex = Number(selectedDay) - 1;
 	appointments[dayIndex].push(meetingString);
 	meetingForm.reset();
-	showAppointmenst(dayIndex);
+	showAppointments(dayIndex);
+
+	// Pallino nei giorni con impegni
+	const dot = document.createElement('span');
+	dot.classList.add('dot');
+	const selectedCell = document.querySelector('.selected');
+	if (!selectedCell.querySelector('dot')) {
+		selectedCell.appendChild(dot);
+	}
 }

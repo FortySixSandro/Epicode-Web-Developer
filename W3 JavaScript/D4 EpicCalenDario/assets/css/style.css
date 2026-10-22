@@ -150,6 +150,10 @@ form button {
     padding: 10px;
 }
 
+.disabled {
+    background-color: gray;
+}
+
 #appointments {
     display: none;
     margin-bottom: 30px;
