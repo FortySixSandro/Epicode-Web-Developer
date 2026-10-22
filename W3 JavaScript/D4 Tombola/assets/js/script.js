@@ -18,7 +18,7 @@ let usciti = []; // array dei numeri già estratti
 
 
 // CREO I DIV CON I NUMERI ALL'INTERNO
-const createNum = (num) => {
+const createNum = () => {
   const tabellone = document.querySelector('#tabellone');
   tabellone.innerHTML = '';
   for (let i = 1; i <= 90; i++) {
@@ -44,7 +44,10 @@ const estrai = () => {
   const numero = sacchetto[casella];
 
   usciti.push(numero)
+  lastNum.innerHTML = numero;
   createNum();
   console.log(usciti)
 }
 bottoneEstrai.addEventListener('click', estrai);
+
+const lastNum = document.querySelector('#ultimo-numero');
