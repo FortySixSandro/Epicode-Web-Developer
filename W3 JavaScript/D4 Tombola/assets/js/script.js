@@ -20,9 +20,13 @@ let usciti = []; // array dei numeri già estratti
 // CREO I DIV CON I NUMERI ALL'INTERNO
 const createNum = (num) => {
   const tabellone = document.querySelector('#tabellone');
+  tabellone.innerHTML = '';
   for (let i = 1; i <= 90; i++) {
     const cellNumber = document.createElement('div');
     cellNumber.classList.add('numero');
+    if (usciti.includes(i)) {
+      cellNumber.classList.add('uscito');
+    }
     cellNumber.textContent = i;
     tabellone.appendChild(cellNumber);
   }
@@ -31,7 +35,16 @@ createNum();
 
 const bottoneEstrai = document.querySelector('#estrai');
 const estrai = () => {
-  const numero = Math.floor(Math.random() * 90) + 1;
-  console.log(numero)
+  const sacchetto = [];
+  for (let i = 1; i <= 90; i++)
+    if (!usciti.includes(i)) {
+      sacchetto.push(i);
+    }
+  const casella = Math.floor(Math.random() * sacchetto.length);
+  const numero = sacchetto[casella];
+
+  usciti.push(numero)
+  createNum();
+  console.log(usciti)
 }
 bottoneEstrai.addEventListener('click', estrai);
