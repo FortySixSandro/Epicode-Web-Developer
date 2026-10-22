@@ -53,9 +53,16 @@ const createDays = (daysNumber) => {
 	for (let i = 0; i < daysNumber; i++) {
 		const dayCellDiv = document.createElement('div');
 		dayCellDiv.classList.add('day');
-		// le celle dovranno essere cliccabili
 		dayCellDiv.addEventListener('click', function () {
-			// scrivere la fuznione del click
+			// per deselezionare il giorno eventualmente selezionato prima
+			unselectAllDays();
+			dayCellDiv.classList.add('selected');
+			changeMeetingDaySection(i);
+			if (appointments[i].length > 0) {
+				showAppointmenst(i);
+			} else {
+				document.querySelector('#appointments').style.display = 'none';
+			}
 		});
 		// numero del giorno
 		const cellValue = document.createElement('h3');
@@ -74,5 +81,54 @@ const createDays = (daysNumber) => {
 		cellValue.innerText = `${dayName} ${i + 1}`;
 		dayCellDiv.appendChild(cellValue);
 		calendarDiv.appendChild(dayCellDiv);
+		// ci serve un array per ogni giorno, da pushare nell'array generale
+		appointments.push([]);
 	}
 };
+
+
+const unselectAllDays = () => {
+	const previousSelected = document.querySelector('.selected');
+	if (previousSelected) {
+		previousSelected.classList.remove('selected');
+	}
+};
+
+const changeMeetingDaySection = (dayNumber) => {
+	const newMeetingDay = document.querySelector('#newMeetingDay');
+	newMeetingDay.innerText = dayNumber + 1;
+	newMeetingDay.classList.add('hasDay');
+};
+
+const showAppointmenst = (dayNumber) => {
+	const dayAppointments = appointments[dayNumber];
+	const appointmentsList = document.querySelector('#appointments ul');
+	appointmentsList.textContent = '';
+	dayAppointments.forEach((appointment) => {
+		const newLi = document.createElement('li');
+		newLi.innerText = appointment;
+		appointmentsList.appendChild(newLi);
+	});
+	document.querySelector('#appointments').style.display = 'block';
+}
+
+// inserimento impegni
+const meetingForm = document.querySelector('form');
+meetingForm.addEventListener('submit', formSubmit);
+
+function formSubmit(e) {
+	e.preventDefault();
+	const selectedDay = document.querySelector('#newMeetingDay').textContent;
+	if (selectedDay === 'Clicca su un giorno') {
+		alert('Seleziona un giorno prima di inserire l\'evento');
+		meetingForm.reset();
+		return;
+	}
+	const meetingTime = document.querySelector('#newMeetingTime').value;
+	const meetingName = document.querySelector('#newMeetingName').value;
+	const meetingString = `${meetingTime} - ${meetingName}`;
+	const dayIndex = Number(selectedDay) - 1;
+	appointments[dayIndex].push(meetingString);
+	meetingForm.reset();
+	showAppointmenst(dayIndex);
+}
