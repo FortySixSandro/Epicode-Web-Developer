@@ -33,6 +33,8 @@ const createNum = () => {
 };
 createNum();
 
+
+// CREO LA FUNZIONA CHE FACCIA FUNZIONARE IL BOTTONE ESTRAI
 const bottoneEstrai = document.querySelector('#estrai');
 const estrai = () => {
   const sacchetto = [];
@@ -46,7 +48,10 @@ const estrai = () => {
   usciti.push(numero)
   lastNum.innerHTML = numero;
   createNum();
-  console.log(usciti)
+  const historyNum = document.querySelector('#cronologia');
+  historyNum.classList.add('ultimo');
+  historyNum.innerHTML = usciti.slice(-8);
+  // console.log(usciti)
 }
 bottoneEstrai.addEventListener('click', estrai);
 
