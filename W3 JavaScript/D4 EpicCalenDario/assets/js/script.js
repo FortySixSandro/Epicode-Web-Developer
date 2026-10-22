@@ -141,7 +141,7 @@ function formSubmit(e) {
 	e.preventDefault();
 	const selectedDay = document.querySelector('#newMeetingDay').textContent;
 	if (selectedDay === 'Clicca su un giorno') {
-		alert("Selezionare un giorno prima di inserire l'evento");
+		alert('Selezionare un giorno prima di inserire l\'evento');
 		meetingForm.reset();
 		return;
 	}
