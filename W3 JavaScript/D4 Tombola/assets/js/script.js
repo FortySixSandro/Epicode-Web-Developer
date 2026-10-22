@@ -42,13 +42,17 @@ const estrai = () => {
     if (!usciti.includes(i)) {
       sacchetto.push(i);
     }
+  if (sacchetto.length === 0) {
+    alert('Numeri finiti!');
+    return;
+  }
   const casella = Math.floor(Math.random() * sacchetto.length);
   const numero = sacchetto[casella];
 
   usciti.push(numero)
   lastNum.innerHTML = numero;
   createNum();
-  
+
   historyNum.classList.add('ultimo');
   historyNum.innerHTML = usciti.slice(-8);
   // console.log(usciti)
@@ -60,7 +64,7 @@ const historyNum = document.querySelector('#cronologia');
 // CREO LA FUNZIONE PER IL TASTO "RICOMINCIA"
 const bottoneReset = document.querySelector('#reset');
 const reset = () => {
-  usciti= [];
+  usciti = [];
   lastNum.innerHTML = '—';
   tabellone.innerHTML = '';
   historyNum.textContent = 'Nessun numero estratto.';
