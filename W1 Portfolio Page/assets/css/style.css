@@ -122,7 +122,7 @@ section h2::before {
     margin-top: -75px;
 }
 
-@media screen and (max-width: 562px) {
+@media screen and (min-width: 576px) {
     #chi-sono {
         margin-top: -20px;
     }
@@ -133,10 +133,8 @@ section h2::before {
         float: none;
     }
 
-    .image p
-
     .image p {
-        margin-top: 0;
+        margin-top: 8;
     }
 }
 
@@ -149,6 +147,12 @@ section h2::before {
     font-weight: bold;
 }
 
+@media screen and (min-width: 576px) {
+    .competenzeTasto {
+        text-align: center;
+    }
+}
+
 /* SEZIONE ESPERIENZE*/
 td {
     border: 1px solid rgb(204, 204, 204);
@@ -158,7 +162,25 @@ tbody tr:nth-child(odd) {
     background-color: #eee;
 }
 
+@media screen and (min-width: 576px) {
+    td {
+        padding: 8px;
+        width: 10%;
+    }
+
+    .esperienzeTasto {
+        text-align: center;
+        margin-top: 5px;
+    }
+}
+
 /*SEZIONE PROGETTI */
+@media (min-width: 576px) {
+    .progettiTasto {
+        text-align: center;
+    }
+}
+
 .preCorso h3::after {
     content: "NEW";
     margin-left: 10px;
@@ -169,7 +191,6 @@ tbody tr:nth-child(odd) {
     border-radius: 5px;
 }
 
-
 .preCorso {
     background-color: rgba(252, 216, 148, 0.212);
     border-radius: 5px;
@@ -177,6 +198,39 @@ tbody tr:nth-child(odd) {
 }
 
 /* SEZIONE CONTATTAMI */
+@media (min-width: 576px) {
+    #contattami {
+        margin: 0;
+    }
+
+    #contattami input,
+    #contattami select {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #contattami input[type="checkbox"] {
+        width: auto;
+    }
+
+    .testoLink {
+        display: none;
+    }
+
+    .tastoBody {
+        text-align: center;
+    }
+
+    form textarea {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+}
+
 form label {
     color: #1F3D7A;
     font-weight: bold;
@@ -188,9 +242,11 @@ form input {
 
 input,
 textarea {
+    background-color: #e6ebf8;
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
     width: 60%;
+    border: 1px solid rgb(204, 204, 204);
 }
 
 input[type="checkbox"] {
