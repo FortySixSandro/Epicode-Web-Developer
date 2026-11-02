@@ -278,7 +278,13 @@ textarea {
 }
 
 input[type="checkbox"] {
+    accent-color: var(--accento);
     width: auto;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--accento);
 }
 
 button {
