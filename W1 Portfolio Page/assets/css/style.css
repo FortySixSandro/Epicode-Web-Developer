@@ -43,7 +43,7 @@ main {
 header {
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 999;
     background-color: var(--blu);
     text-align: center;
     line-height: 2.4;
@@ -243,6 +243,13 @@ tbody tr:nth-child(odd) {
     border-radius: 8px;
     max-width: 500px;
     width: 90%;
+}
+
+#closeModal{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 14px 24;
 }
 
 @media (min-width: 576px) {
