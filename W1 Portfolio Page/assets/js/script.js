@@ -1,4 +1,3 @@
-
 const openModal = document.querySelector('#openModal');
 const closeModal = document.querySelector('#closeModal');
 const overlay = document.querySelector('#overlay');
