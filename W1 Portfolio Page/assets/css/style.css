@@ -58,6 +58,7 @@ header h1 {
     color: var(--bianco);
     font-family: "PT Serif Caption", serif;
     font-size: 50px;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
@@ -80,11 +81,14 @@ nav a {
     color: var(--grigio);
     font-weight: bold;
     display: inline-block;
+    text-decoration: none;
 }
 
 nav a:hover {
     color: var(--accento);
 }
+
+header svg{margin-right: 2px;}
 
 /* SEZIONI GENERALI */
 section {
