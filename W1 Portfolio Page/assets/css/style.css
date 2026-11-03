@@ -19,6 +19,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-size: 16px;
@@ -37,12 +41,17 @@ main {
 
 /* HEADER/NAV */
 header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     background-color: var(--blu);
     text-align: center;
     line-height: 2.4;
     border-bottom: 4px solid var(--accento);
     width: 100%;
     padding: 12px;
+
+
 }
 
 header h1 {
@@ -193,9 +202,18 @@ tbody tr:nth-child(odd) {
     }
 }
 
+.preCorso {
+    position: relative;
+    background-color: rgba(252, 163, 17, 0.15);
+    border-radius: 5px;
+    padding: 2px;
+}
+
 .preCorso h3::after {
     content: "NEW";
-    margin-left: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background-color: var(--accento);
     padding: 4px 5px;
     color: var(--blu);
@@ -203,13 +221,30 @@ tbody tr:nth-child(odd) {
     border-radius: 5px;
 }
 
-.preCorso {
-    background-color: rgba(252, 163, 17, 0.15);
-    border-radius: 5px;
-    padding: 2px;
+/* SEZIONE CONTATTAMI/MODAL */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
 }
 
-/* SEZIONE CONTATTAMI */
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bianco);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+}
+
 @media (min-width: 576px) {
     #contattami {
         margin: 0;
@@ -230,7 +265,27 @@ tbody tr:nth-child(odd) {
     }
 
     .tastoBody {
+        position: sticky;
+        padding: 10px;
+        bottom: 0;
+        right: 0;
+        width: 5%;
+        margin-left: auto;
         text-align: center;
+        border-radius: 20%;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        background-color: #14213d;
+    }
+
+    .tastoBody a {
+        color: var(--accento);
+        font-size: 25px;
+    }
+
+    .tastoBody svg:hover {
+        transform: scaleY(1.2);
+        transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
     }
 
     form textarea {
@@ -299,6 +354,10 @@ button:hover {
     background-color: var(--accento);
     color: var(--nero);
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.397);
+}
+
+#scriviModale {
+    width: 25%;
 }
 
 /* FOOTER */
