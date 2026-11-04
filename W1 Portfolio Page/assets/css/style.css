@@ -39,7 +39,13 @@ main {
     max-width: 920px;
 }
 
-/* HEADER/NAV */
+@media (min-width: 1200px) {
+    main {
+        max-width: 1100px;
+    }
+}
+
+/* HEADER */
 header {
     position: sticky;
     top: 0;
@@ -48,39 +54,49 @@ header {
     text-align: center;
     line-height: 2.4;
     border-bottom: 4px solid var(--accento);
-    width: 100%;
     padding: 12px;
-
-
 }
 
 header h1 {
     color: var(--bianco);
     font-family: "PT Serif Caption", serif;
-    font-size: 50px;
-    margin-top: 0;
-    margin-bottom: 0;
+    font-size: 32px;
+    margin: 0;
 }
 
 header p {
     color: var(--accento);
     font-style: italic;
-    margin-top: 0;
+    margin: 0;
 }
 
+@media (min-width: 768px) {
+    header h1 {
+        font-size: 50px;
+    }
+}
+
+/* NAV */
 nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 0;
     padding: 0;
 }
 
 nav li {
-    display: inline-block;
-    padding: 10px;
+    list-style: none;
+    padding: 4px 8px;
 }
 
 nav a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: var(--grigio);
     font-weight: bold;
-    display: inline-block;
     text-decoration: none;
 }
 
@@ -88,7 +104,50 @@ nav a:hover {
     color: var(--accento);
 }
 
-header svg{margin-right: 2px;}
+@media (min-width: 576px) {
+    nav ul {
+        gap: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav ul {
+        gap: 32px;
+    }
+}
+
+/* SEZIONE CHI SONO */
+.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.image p {
+    margin: 0;
+}
+
+.avatar {
+    flex-shrink: 0;
+    width: 115px;
+    height: 130px;
+    border: 4px solid var(--blu);
+    border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+    .image {
+        flex-direction: row;
+        gap: 22px;
+    }
+
+    .image p::first-letter {
+        font-size: 3rem;
+        color: var(--accento);
+    }
+}
 
 /* SEZIONI GENERALI */
 section {
@@ -108,77 +167,32 @@ section h2::before {
     color: var(--accento);
 }
 
-#esperienze h2 {
-    color: var(--blu);
+/* COMPETENZE */
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
-#esperienze h2::before {
-    content: "- ";
-    color: var(--accento);
-}
-
-/* SEZIONE CHI SONO */
-.avatar {
-    float: left;
-    border: 4px solid var(--blu);
-    border-radius: 50%;
-    width: 115px;
-    height: 130px;
-    margin-right: 22px;
-}
-
-#chi-sono {
-    margin-top: -75px;
-}
-
-@media screen and (min-width: 576px) {
-    #chi-sono {
-        margin-top: -20px;
-    }
-
-    .avatar {
-        display: block;
-        margin: 0 auto;
-        float: none;
-    }
-
-    .image p {
-        margin-top: 8px;
-    }
-}
-
-@media (min-width: 768px) {
-    .avatar {
-        float: left;
-        border: 4px solid var(--blu);
-        border-radius: 50%;
-        width: 115px;
-        height: 130px;
-        margin-right: 22px;
-    }
-
-    .image p::first-letter {
-        font-size: 3rem;
-        color: var(--accento);
-    }
-}
-
-/* SEZIONE COMPETENZE */
-#competenze li:nth-child(odd) {
-    background-color: var(--grigio);
-}
-
-#competenze span {
+.chips li {
+    background-color: var(--blu);
+    color: var(--bianco);
+    font-size: 0.85rem;
     font-weight: bold;
+    line-height: 1.4;
+    padding: 4px 14px;
+    border-radius: 999px;
 }
 
-@media screen and (min-width: 576px) {
-    .competenzeTasto {
-        text-align: center;
-    }
+.chips li:first-child {
+    background-color: var(--accento);
+    color: var(--nero);
 }
 
-/* SEZIONE ESPERIENZE*/
+/* ESPERIENZE */
 td {
     border: 1px solid var(--grigio);
 }
@@ -187,30 +201,40 @@ tbody tr:nth-child(odd) {
     background-color: var(--grigio);
 }
 
-@media screen and (min-width: 576px) {
+.espSecondTitle{
+    text-align: center;
+    font-style: italic;
+    color: grey;
+}
+
+@media (min-width: 576px) {
     td {
         padding: 8px;
         width: 10%;
     }
-
-    .esperienzeTasto {
-        text-align: center;
-        margin-top: 5px;
-    }
 }
 
-/*SEZIONE PROGETTI */
-@media (min-width: 576px) {
-    .progettiTasto {
-        text-align: center;
-    }
+/* PROGETTI */
+.progetti-griglia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.card {
+    flex: 1 1 260px;
+    padding: 12px 16px;
+    border: 1px solid var(--grigio);
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin-top: 0;
 }
 
 .preCorso {
     position: relative;
     background-color: rgba(252, 163, 17, 0.15);
-    border-radius: 5px;
-    padding: 2px;
 }
 
 .preCorso h3::after {
@@ -225,7 +249,7 @@ tbody tr:nth-child(odd) {
     border-radius: 5px;
 }
 
-/* SEZIONE CONTATTAMI/MODAL */
+/* CONTATTAMI, FORM E MODAL */
 .overlay {
     display: none;
     position: fixed;
@@ -246,80 +270,11 @@ tbody tr:nth-child(odd) {
     width: 90%;
 }
 
-#closeModal{
+#closeModal {
     position: absolute;
     top: 10px;
     right: 10px;
-    padding: 14px 24;
-}
-
-@media (min-width: 576px) {
-    #contattami {
-        margin: 0;
-    }
-
-    #contattami input,
-    #contattami select {
-        width: 100%;
-        padding: 5px;
-    }
-
-    #contattami input[type="checkbox"] {
-        width: auto;
-    }
-
-    .testoLink {
-        display: none;
-    }
-
-    .tastoBody {
-        position: sticky;
-        padding: 10px;
-        bottom: 0;
-        right: 0;
-        width: 5%;
-        margin-left: auto;
-        text-align: center;
-        border-radius: 20%;
-        margin-right: 50px;
-        margin-bottom: 20px;
-        background-color: #14213d;
-    }
-
-    .tastoBody a {
-        color: var(--accento);
-        font-size: 25px;
-    }
-
-    .tastoBody svg:hover {
-        transform: scaleY(1.2);
-        transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
-    }
-
-    form textarea {
-        width: 100%;
-    }
-
-    form button {
-        width: 100%;
-    }
-}
-
-@media (min-width: 768px) {
-
-    #contattami input,
-    #contattami select {
-        width: 50%;
-        padding: 5px;
-    }
-
-    form textarea {
-        width: 50%;
-    }
-
-    form button {
-        width: 25%;
-    }
+    padding: 14px 24px;
 }
 
 form label {
@@ -327,16 +282,12 @@ form label {
     font-weight: bold;
 }
 
-form input {
-    font-family: "Helvetica Neue", Arial, sans-serif;
-}
-
 input,
 textarea {
     background-color: var(--grigio);
     font-family: "Helvetica Neue", Arial, sans-serif;
     font-size: 1rem;
-    width: 60%;
+    width: 100%;
     border: 1px solid var(--blu);
 }
 
@@ -364,8 +315,73 @@ button:hover {
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.397);
 }
 
-#scriviModale {
-    width: 25%;
+/* Tasto "torna su" */
+@media (min-width: 576px) {
+    #contattami {
+        margin: 0;
+    }
+
+    #contattami input,
+    #contattami select {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #contattami input[type="checkbox"] {
+        width: auto;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+    .testoLink {
+        display: none;
+    }
+
+    .tastoBody {
+        position: sticky;
+        padding: 8px;
+        bottom: 0;
+        right: 0;
+        width: 45px;
+        height: 45px;
+        margin-left: auto;
+        margin-right: 50px;
+        margin-bottom: 20px;
+        border-radius: 20%;
+        background-color: var(--blu);
+    }
+
+    .tastoBody a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .tastoBody svg {
+        color: var(--accento);
+        font-size: 22px;
+    }
+
+    .tastoBody svg:hover {
+        transform: scaleY(1.2);
+        transition: all 0.4s cubic-bezier(.215, .61, .355, 1);
+    }
+}
+
+@media (min-width: 768px) {
+
+    #contattami input,
+    #contattami select,
+    form textarea {
+        width: 50%;
+    }
+
+    form button {
+        width: 25%;
+    }
 }
 
 /* FOOTER */

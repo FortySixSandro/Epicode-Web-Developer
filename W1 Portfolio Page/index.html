@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <script src="https://kit.fontawesome.com/03eb2181c5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -28,7 +27,7 @@
         <section id="chi-sono">
             <h2 class="titoloBlu">Chi sono</h2>
             <div class="image">
-                <img class="avatar" src="assets/img/hasbulla.jpg" alt="Foto profilo Hasbulla" height="200px">
+                <img class="avatar" src="assets/img/hasbulla.jpg" alt="Foto profilo Hasbulla">
                 <p><em>Mi chiamo Alessandro Milazzo e sto imparando a programmare.
                         Studio sviluppo web con
                         <strong>Epicode</strong>
@@ -42,24 +41,20 @@
 
         <section id="competenze">
             <h2 class="titoloBlu">Competenze</h2>
-            <p>Le tecnologie che vedeo durante le prime settimane di corso.</p>
-            <ul>
-                <li><span>HTML</span> &ndash; struttura delle pagine</li>
-                <li>CSS &ndash; stile e impaginazione</li>
-                <li>Git e GitHub &ndash; versionamento del codice</li>
-                <li>Visual Studio Cose &ndash; editor di lavoro</li>
+            <p>Le tecnologie che vedo durante le prime settimane di corso.</p>
+            <ul class="chips">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Git e GitHub</li>
+                <li>Visual Studio Code</li>
             </ul>
-
         </section>
 
-
         <section id="esperienze">
+            <h2 class="titoloBlu">Esperienze</h2>
+            <p>Un riepilogo del mio percorso formativo e lavorativo recente.</p>
+            <p class="espSecondTitle" >Esperienze formative e lavorative</p>
             <table>
-                <div>
-                    <h2 class="titoloBlu">Esperienze</h2>
-                    <p>Un riepilogo del mio percorso formativo e lavorativo recente.</p>
-                </div>
-
                 <thead>
                     <tr>
                         <th>Anno</th>
@@ -85,18 +80,28 @@
                     </tr>
                 </tbody>
             </table>
-
         </section>
 
         <section id="progetti">
             <h2 class="titoloBlu">Progetti</h2>
             <p>I lavori fatti durante le prime settimane di corso.</p>
-            <div class="preCorso">
-                <h3>Pre-corso</h3>
-                <p>Consegne del pre-corso:
-                    <a href="https://github.com/FortySixSandro/Epicode-Web-Developer/tree/main/pre-corso"
-                        target="_blank">Consegne</a>
-                </p>
+
+            <div class="progetti-griglia">
+                <div class="card preCorso">
+                    <h3>Pre-corso</h3>
+                    <p>Consegne del pre-corso:
+                        <a href="https://github.com/FortySixSandro/Epicode-Web-Developer/tree/main/pre-corso"
+                            target="_blank">Consegne</a>
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Card di presentazione</h3>
+                    <p>Un biglietto digitale con nome, ruolo e link ai social.
+                        <a href="https://github.com/FortySixSandro/Epicode-Web-Developer" target="_blank">Vedi su
+                            GitHub</a>
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -138,7 +143,7 @@
 
                         <label for="dataRisposta">Data preferita per la risposta</label>
                         <br>
-                        <input type="date">
+                        <input type="date" id="dataRisposta" name="dataRisposta">
 
                         <br>
                         <br>
@@ -174,15 +179,15 @@
 
     </main>
 
-    <!-- <aside id="contatti"></aside> -->
     <div class="tastoBody">
-        <a href="#"><i class="fa-solid fa-arrow-turn-up"></i></a>
+        <a href="#"><i class="fa-solid fa-arrow-up-long"></i></a>
     </div>
 
     <footer>
         <p>&copy; 2026 Alessandro Milazzo</p>
     </footer>
 
+    <script src="https://kit.fontawesome.com/03eb2181c5.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
