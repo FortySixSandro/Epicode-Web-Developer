@@ -368,6 +368,20 @@ button:hover {
 
 
 /* Tasto "torna su" */
+@keyframes boing {
+    0% {
+        transform: scale(1) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.2, 0.8) translateY(-20px);
+    }
+
+    100% {
+        transform: scale(0.9, 1.1) translateY(0);
+    }
+}
+
 @media (min-width: 576px) {
     #contattami {
         margin: 0;
@@ -393,7 +407,7 @@ button:hover {
 
     .tastoBody {
         position: sticky;
-        padding: 8px;
+        padding: 30px;
         bottom: 0;
         right: 0;
         width: 45px;
@@ -403,6 +417,7 @@ button:hover {
         margin-bottom: 20px;
         border-radius: 20%;
         background-color: var(--blu);
+        animation: boing 1.5s infinite;
     }
 
     .tastoBody a {
