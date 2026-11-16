@@ -12,21 +12,32 @@
 // === Classi ===
 
 class Libro {
-    constructor(_titolo, _autore, _anno, _letto) {
+    letto = false;
+    constructor(_titolo, _autore, _anno,) {
+        this.id = crypto.randomUUID();
         this.titolo = _titolo;
         this.autore = _autore;
         this.anno = _anno;
-        this.letto = _letto;
     }
+    segnaComeLetto() {
+        this.letto = true;
+    }
+    formato() { return `cartaceo` }
 }
 
 class LibroDigitale extends Libro {
-    constructor(_titolo, _autore, _anno, _letto, _formato, _dimenisoneMb) {
-        super(_titolo, _autore, _anno, _letto);
-        this.formato = _formato;
-        this.dimenisoneMb = _dimenisoneMb;
+    constructor(_titolo, _autore, _anno, _dimensioneMb) {
+        super(_titolo, _autore, _anno,);
+        this.dimensioneMb = _dimensioneMb;
     }
+    formato() { return `digitale (${this.dimensioneMb} MB)` };
 }
+
+const a = new Libro('Dune', 'Herbert', 1965);
+const b = new LibroDigitale('Neuromante', 'Gibson', 1984, 2.5);
+
+console.log(a.formato());
+console.log(b.formato());
 // === Stato (array di libri) ===
 
 
